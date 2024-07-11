@@ -7,7 +7,7 @@
 //
 
 // MARK: - Combine Latest
-<% for i in 2 ... 8 { %>
+<% for i in 2 ... 12 { %>
 // <%= i %>
 extension Infallible {
     /**

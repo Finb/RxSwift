@@ -29,24 +29,6 @@ extension Infallible {
     }
 }
 
-extension InfallibleType where Element == Any {
-    /**
-    Merges the specified observable sequences into one observable sequence of tuples whenever any of the observable sequences produces an element.
-
-    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
-
-    - returns: An observable sequence containing the result of combining elements of the sources.
-    */
-    public static func combineLatest<O1: InfallibleType, O2: InfallibleType>
-        (_ source1: O1, _ source2: O2)
-            -> Infallible<(O1.Element, O2.Element)> {
-        Infallible.combineLatest(
-            source1, source2,
-            resultSelector: { ($0, $1) }
-        )
-    }
-}
-
 // 3
 extension Infallible {
     /**
@@ -64,24 +46,6 @@ extension Infallible {
             source1: source1.asObservable(), source2: source2.asObservable(), source3: source3.asObservable(),
             resultSelector: resultSelector
         ))
-    }
-}
-
-extension InfallibleType where Element == Any {
-    /**
-    Merges the specified observable sequences into one observable sequence of tuples whenever any of the observable sequences produces an element.
-
-    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
-
-    - returns: An observable sequence containing the result of combining elements of the sources.
-    */
-    public static func combineLatest<O1: InfallibleType, O2: InfallibleType, O3: InfallibleType>
-        (_ source1: O1, _ source2: O2, _ source3: O3)
-            -> Infallible<(O1.Element, O2.Element, O3.Element)> {
-        Infallible.combineLatest(
-            source1, source2, source3,
-            resultSelector: { ($0, $1, $2) }
-        )
     }
 }
 
@@ -105,24 +69,6 @@ extension Infallible {
     }
 }
 
-extension InfallibleType where Element == Any {
-    /**
-    Merges the specified observable sequences into one observable sequence of tuples whenever any of the observable sequences produces an element.
-
-    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
-
-    - returns: An observable sequence containing the result of combining elements of the sources.
-    */
-    public static func combineLatest<O1: InfallibleType, O2: InfallibleType, O3: InfallibleType, O4: InfallibleType>
-        (_ source1: O1, _ source2: O2, _ source3: O3, _ source4: O4)
-            -> Infallible<(O1.Element, O2.Element, O3.Element, O4.Element)> {
-        Infallible.combineLatest(
-            source1, source2, source3, source4,
-            resultSelector: { ($0, $1, $2, $3) }
-        )
-    }
-}
-
 // 5
 extension Infallible {
     /**
@@ -140,24 +86,6 @@ extension Infallible {
             source1: source1.asObservable(), source2: source2.asObservable(), source3: source3.asObservable(), source4: source4.asObservable(), source5: source5.asObservable(),
             resultSelector: resultSelector
         ))
-    }
-}
-
-extension InfallibleType where Element == Any {
-    /**
-    Merges the specified observable sequences into one observable sequence of tuples whenever any of the observable sequences produces an element.
-
-    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
-
-    - returns: An observable sequence containing the result of combining elements of the sources.
-    */
-    public static func combineLatest<O1: InfallibleType, O2: InfallibleType, O3: InfallibleType, O4: InfallibleType, O5: InfallibleType>
-        (_ source1: O1, _ source2: O2, _ source3: O3, _ source4: O4, _ source5: O5)
-            -> Infallible<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element)> {
-        Infallible.combineLatest(
-            source1, source2, source3, source4, source5,
-            resultSelector: { ($0, $1, $2, $3, $4) }
-        )
     }
 }
 
@@ -181,24 +109,6 @@ extension Infallible {
     }
 }
 
-extension InfallibleType where Element == Any {
-    /**
-    Merges the specified observable sequences into one observable sequence of tuples whenever any of the observable sequences produces an element.
-
-    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
-
-    - returns: An observable sequence containing the result of combining elements of the sources.
-    */
-    public static func combineLatest<O1: InfallibleType, O2: InfallibleType, O3: InfallibleType, O4: InfallibleType, O5: InfallibleType, O6: InfallibleType>
-        (_ source1: O1, _ source2: O2, _ source3: O3, _ source4: O4, _ source5: O5, _ source6: O6)
-            -> Infallible<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element)> {
-        Infallible.combineLatest(
-            source1, source2, source3, source4, source5, source6,
-            resultSelector: { ($0, $1, $2, $3, $4, $5) }
-        )
-    }
-}
-
 // 7
 extension Infallible {
     /**
@@ -216,24 +126,6 @@ extension Infallible {
             source1: source1.asObservable(), source2: source2.asObservable(), source3: source3.asObservable(), source4: source4.asObservable(), source5: source5.asObservable(), source6: source6.asObservable(), source7: source7.asObservable(),
             resultSelector: resultSelector
         ))
-    }
-}
-
-extension InfallibleType where Element == Any {
-    /**
-    Merges the specified observable sequences into one observable sequence of tuples whenever any of the observable sequences produces an element.
-
-    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
-
-    - returns: An observable sequence containing the result of combining elements of the sources.
-    */
-    public static func combineLatest<O1: InfallibleType, O2: InfallibleType, O3: InfallibleType, O4: InfallibleType, O5: InfallibleType, O6: InfallibleType, O7: InfallibleType>
-        (_ source1: O1, _ source2: O2, _ source3: O3, _ source4: O4, _ source5: O5, _ source6: O6, _ source7: O7)
-            -> Infallible<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element)> {
-        Infallible.combineLatest(
-            source1, source2, source3, source4, source5, source6, source7,
-            resultSelector: { ($0, $1, $2, $3, $4, $5, $6) }
-        )
     }
 }
 
@@ -257,20 +149,83 @@ extension Infallible {
     }
 }
 
-extension InfallibleType where Element == Any {
+// 9
+extension Infallible {
     /**
-    Merges the specified observable sequences into one observable sequence of tuples whenever any of the observable sequences produces an element.
+    Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.
 
     - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
 
-    - returns: An observable sequence containing the result of combining elements of the sources.
+    - parameter resultSelector: Function to invoke whenever any of the sources produces an element.
+    - returns: An observable sequence containing the result of combining elements of the sources using the specified result selector function.
     */
-    public static func combineLatest<O1: InfallibleType, O2: InfallibleType, O3: InfallibleType, O4: InfallibleType, O5: InfallibleType, O6: InfallibleType, O7: InfallibleType, O8: InfallibleType>
-        (_ source1: O1, _ source2: O2, _ source3: O3, _ source4: O4, _ source5: O5, _ source6: O6, _ source7: O7, _ source8: O8)
-            -> Infallible<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element, O8.Element)> {
-        Infallible.combineLatest(
-            source1, source2, source3, source4, source5, source6, source7, source8,
-            resultSelector: { ($0, $1, $2, $3, $4, $5, $6, $7) }
-        )
+    public static func combineLatest<I1: InfallibleType, I2: InfallibleType, I3: InfallibleType, I4: InfallibleType, I5: InfallibleType, I6: InfallibleType, I7: InfallibleType, I8: InfallibleType, I9: InfallibleType>
+        (_ source1: I1, _ source2: I2, _ source3: I3, _ source4: I4, _ source5: I5, _ source6: I6, _ source7: I7, _ source8: I8, _ source9: I9, resultSelector: @escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element, I8.Element, I9.Element) throws -> Element)
+            -> Infallible<Element> {
+        Infallible(CombineLatest9(
+            source1: source1.asObservable(), source2: source2.asObservable(), source3: source3.asObservable(), source4: source4.asObservable(), source5: source5.asObservable(), source6: source6.asObservable(), source7: source7.asObservable(), source8: source8.asObservable(), source9: source9.asObservable(),
+            resultSelector: resultSelector
+        ))
     }
 }
+
+// 10
+extension Infallible {
+    /**
+    Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.
+
+    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
+
+    - parameter resultSelector: Function to invoke whenever any of the sources produces an element.
+    - returns: An observable sequence containing the result of combining elements of the sources using the specified result selector function.
+    */
+    public static func combineLatest<I1: InfallibleType, I2: InfallibleType, I3: InfallibleType, I4: InfallibleType, I5: InfallibleType, I6: InfallibleType, I7: InfallibleType, I8: InfallibleType, I9: InfallibleType, I10: InfallibleType>
+        (_ source1: I1, _ source2: I2, _ source3: I3, _ source4: I4, _ source5: I5, _ source6: I6, _ source7: I7, _ source8: I8, _ source9: I9, _ source10: I10, resultSelector: @escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element, I8.Element, I9.Element, I10.Element) throws -> Element)
+            -> Infallible<Element> {
+        Infallible(CombineLatest10(
+            source1: source1.asObservable(), source2: source2.asObservable(), source3: source3.asObservable(), source4: source4.asObservable(), source5: source5.asObservable(), source6: source6.asObservable(), source7: source7.asObservable(), source8: source8.asObservable(), source9: source9.asObservable(), source10: source10.asObservable(),
+            resultSelector: resultSelector
+        ))
+    }
+}
+
+// 11
+extension Infallible {
+    /**
+    Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.
+
+    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
+
+    - parameter resultSelector: Function to invoke whenever any of the sources produces an element.
+    - returns: An observable sequence containing the result of combining elements of the sources using the specified result selector function.
+    */
+    public static func combineLatest<I1: InfallibleType, I2: InfallibleType, I3: InfallibleType, I4: InfallibleType, I5: InfallibleType, I6: InfallibleType, I7: InfallibleType, I8: InfallibleType, I9: InfallibleType, I10: InfallibleType, I11: InfallibleType>
+        (_ source1: I1, _ source2: I2, _ source3: I3, _ source4: I4, _ source5: I5, _ source6: I6, _ source7: I7, _ source8: I8, _ source9: I9, _ source10: I10, _ source11: I11, resultSelector: @escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element, I8.Element, I9.Element, I10.Element, I11.Element) throws -> Element)
+            -> Infallible<Element> {
+        Infallible(CombineLatest11(
+            source1: source1.asObservable(), source2: source2.asObservable(), source3: source3.asObservable(), source4: source4.asObservable(), source5: source5.asObservable(), source6: source6.asObservable(), source7: source7.asObservable(), source8: source8.asObservable(), source9: source9.asObservable(), source10: source10.asObservable(), source11: source11.asObservable(),
+            resultSelector: resultSelector
+        ))
+    }
+}
+
+// 12
+extension Infallible {
+    /**
+    Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.
+
+    - seealso: [combineLatest operator on reactivex.io](http://reactivex.io/documentation/operators/combinelatest.html)
+
+    - parameter resultSelector: Function to invoke whenever any of the sources produces an element.
+    - returns: An observable sequence containing the result of combining elements of the sources using the specified result selector function.
+    */
+    public static func combineLatest<I1: InfallibleType, I2: InfallibleType, I3: InfallibleType, I4: InfallibleType, I5: InfallibleType, I6: InfallibleType, I7: InfallibleType, I8: InfallibleType, I9: InfallibleType, I10: InfallibleType, I11: InfallibleType, I12: InfallibleType>
+        (_ source1: I1, _ source2: I2, _ source3: I3, _ source4: I4, _ source5: I5, _ source6: I6, _ source7: I7, _ source8: I8, _ source9: I9, _ source10: I10, _ source11: I11, _ source12: I12, resultSelector: @escaping (I1.Element, I2.Element, I3.Element, I4.Element, I5.Element, I6.Element, I7.Element, I8.Element, I9.Element, I10.Element, I11.Element, I12.Element) throws -> Element)
+            -> Infallible<Element> {
+        Infallible(CombineLatest12(
+            source1: source1.asObservable(), source2: source2.asObservable(), source3: source3.asObservable(), source4: source4.asObservable(), source5: source5.asObservable(), source6: source6.asObservable(), source7: source7.asObservable(), source8: source8.asObservable(), source9: source9.asObservable(), source10: source10.asObservable(), source11: source11.asObservable(), source12: source12.asObservable(),
+            resultSelector: resultSelector
+        ))
+    }
+}
+
